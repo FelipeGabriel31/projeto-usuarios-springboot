@@ -1,0 +1,10 @@
+# Configuracao para publicar a API no Render via Blueprint.
+services:
+  - type: web
+    name: usuarios-springboot-trabalho
+    runtime: docker
+    plan: free
+    healthCheckPath: /usuarios
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: -XX:MaxRAMPercentage=70.0
